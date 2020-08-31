@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Project 2: Command Line Shell</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="index_1autotoc_md1">
+<title>General Info</title>
+<para><itemizedlist>
+<listitem><para>Simple shell implementation that runs in both current directory and in the PATH environment</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Components</title>
+<para><itemizedlist>
+<listitem><para>Prompt - Displays shell prompt with helpful information</para>
+</listitem><listitem><para>Scripting - Supports scripting mode to run test cases</para>
+</listitem><listitem><para>Built-In Commands - Supports built-in commands including (cd, #, history, !, jobs, exit)</para>
+</listitem><listitem><para>Signal Handling - Able to grancefully handle user pressing Ctrl+C</para>
+</listitem><listitem><para>Redirection - Supports file output redirection and pipe redirection</para>
+</listitem><listitem><para>Background Jobs - Run command in the background if command ends in &amp;</para>
+</listitem><listitem><para>Tab Completion - Autocomplete command of user if user presses tab key</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Run Code</title>
+<para>&apos;&apos;&apos; make ./crash &apos;&apos;&apos;</para>
+</sect1>
+<sect1 id="index_1autotoc_md4">
+<title>Run Tests</title>
+<para>&apos;&apos;&apos; make test &apos;&apos;&apos;</para>
+<para>See: <ulink url="https://www.cs.usfca.edu/~mmalensek/cs326/assignments/project-2.html">https://www.cs.usfca.edu/~mmalensek/cs326/assignments/project-2.html</ulink> </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ui_8c" kind="file" language="C++">
+    <compoundname>ui.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">readline/readline.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes local="no">locale.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes refid="history_8h" local="yes">history.h</includes>
+    <includes refid="logger_8h" local="yes">logger.h</includes>
+    <includes refid="ui_8h" local="yes">ui.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>stdbool.h</label>
+      </node>
+      <node id="7">
+        <label>stdlib.h</label>
+      </node>
+      <node id="10">
+        <label>logger.h</label>
+        <link refid="logger_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>limits.h</label>
+      </node>
+      <node id="8">
+        <label>unistd.h</label>
+      </node>
+      <node id="9">
+        <label>history.h</label>
+        <link refid="history_8h"/>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>locale.h</label>
+      </node>
+      <node id="1">
+        <label>ui.c</label>
+        <link refid="ui_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ui.h</label>
+        <link refid="ui_8h"/>
+      </node>
+      <node id="3">
+        <label>readline/readline.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ui_8c_1a24f52ac52d6e714cb04a5aa01be3bdd0" prot="public" static="no">
+        <name>BUF</name>
+        <initializer>4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="17" column="9" bodyfile="ui.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ui_8c_1aab27efc112eb8d390875d80ac6da59bd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool exit_status</definition>
+        <argsstring></argsstring>
+        <name>exit_status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="19" column="6" bodyfile="ui.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1a11f97c3de76da78c593ff4fa4abb4581" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int list_index</definition>
+        <argsstring></argsstring>
+        <name>list_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="21" column="5" bodyfile="ui.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1a92f9f963fc1844a1653a64b8e86a7db8" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char username[LOGIN_NAME_MAX]</definition>
+        <argsstring>[LOGIN_NAME_MAX]</argsstring>
+        <name>username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="22" column="6" bodyfile="ui.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1aada24ab0f5bbba555afe1420c16ac2f7" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char hostname[HOST_NAME_MAX]</definition>
+        <argsstring>[HOST_NAME_MAX]</argsstring>
+        <name>hostname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="23" column="6" bodyfile="ui.c" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1aab9918aee7b44298acc5fc11b3695555" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char temp_cwd[PATH_MAX]</definition>
+        <argsstring>[PATH_MAX]</argsstring>
+        <name>temp_cwd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="24" column="6" bodyfile="ui.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1a9c19a595d32fe3e78b4aeb449cc19bf1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cwd[PATH_MAX]</definition>
+        <argsstring>[PATH_MAX]</argsstring>
+        <name>cwd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="25" column="6" bodyfile="ui.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1acad4d9993e781f853a85718770be5949" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char home_dir[PATH_MAX]</definition>
+        <argsstring>[PATH_MAX]</argsstring>
+        <name>home_dir</name>
+        <initializer>= &quot;/home/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="26" column="6" bodyfile="ui.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1a37da80211a99c252815b08e78ecb54be" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char temp_dir[PATH_MAX]</definition>
+        <argsstring>[PATH_MAX]</argsstring>
+        <name>temp_dir</name>
+        <initializer>= &quot;~&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="27" column="6" bodyfile="ui.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1a8adb30f4f6669f927fd9232f686c637b" prot="public" static="yes" mutable="no">
+        <type>char *</type>
+        <definition>char* line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="36" column="13" bodyfile="ui.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1abb05d631ed03c1d25dc204b42ecd0799" prot="public" static="yes" mutable="no">
+        <type>size_t</type>
+        <definition>size_t line_sz</definition>
+        <argsstring></argsstring>
+        <name>line_sz</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="37" column="15" bodyfile="ui.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1afb692d1283117442b562395922c8d23b" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char prompt_str1[BUF]</definition>
+        <argsstring>[BUF]</argsstring>
+        <name>prompt_str1</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="39" column="13" bodyfile="ui.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1a81462c43bf74afa5347718a414582bd8" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char prompt_str2[BUF]</definition>
+        <argsstring>[BUF]</argsstring>
+        <name>prompt_str2</name>
+        <initializer>= &quot;-&gt; &quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="40" column="13" bodyfile="ui.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1a1887f00dd5221709d3f3be69d5ac80e5" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char exit_status_success[]</definition>
+        <argsstring>[]</argsstring>
+        <name>exit_status_success</name>
+        <initializer>= {0xF0,0x9F,0x98,0x81,&apos;\0&apos;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="42" column="13" bodyfile="ui.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ui_8c_1afbd7d50fe580b51aa15034aa2ea142cc" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char exit_status_fail[]</definition>
+        <argsstring>[]</argsstring>
+        <name>exit_status_fail</name>
+        <initializer>= {0xF0,0x9F,0xA4,0xAE,&apos;\0&apos;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="43" column="13" bodyfile="ui.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ui_8c_1aa6ec085391771e1f2721e8cd5e11f8a1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int readline_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>readline_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize Readline for key recognition</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>none</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: int of key of keyboard </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="153" column="5" bodyfile="ui.c" bodystart="153" bodyend="161" declfile="ui.c" declline="30" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8c_1a830f1692d60868f535069cc6b056ac65" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int key_up</definition>
+        <argsstring>(int count, int key)</argsstring>
+        <name>key_up</name>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Accepts up key arrow and will reverse history search with up key</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>count: int counter for prefix start</para>
+</listitem><listitem><para>key: int</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: location in history </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="172" column="5" bodyfile="ui.c" bodystart="172" bodyend="183" declfile="ui.c" declline="31" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8c_1a8c4f03db9a6667ea25d924877be90734" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int key_down</definition>
+        <argsstring>(int count, int key)</argsstring>
+        <name>key_down</name>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Accepts down key arrow and will foward history search with down key</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>count: int counter for prefix start</para>
+</listitem><listitem><para>key: int</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: char pointer to the next token in the string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="194" column="5" bodyfile="ui.c" bodystart="194" bodyend="205" declfile="ui.c" declline="32" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8c_1a597c9473c751029ee71a0d468862f280" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char **</type>
+        <definition>char ** command_completion</definition>
+        <argsstring>(const char *text, int start, int end)</argsstring>
+        <name>command_completion</name>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell readline that if there are no suitable completion, it should fall back on its built-in filename completion</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>text: char</para>
+</listitem><listitem><para>start: int</para>
+</listitem><listitem><para>end: int</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: char </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="217" column="6" bodyfile="ui.c" bodystart="217" bodyend="224" declfile="ui.c" declline="33" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8c_1a72bec0f162c26e9f69529d6ecb637ed4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * command_generator</definition>
+        <argsstring>(const char *text, int state)</argsstring>
+        <name>command_generator</name>
+        <param>
+          <type>const char *</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function is called repeatedly by the readline library to build a list of possible completions. It returns one match per function call. Once there are no more completions available, it returns NULL. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="231" column="6" bodyfile="ui.c" bodystart="231" bodyend="240" declfile="ui.c" declline="34" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8c_1a2c48080cb120e8745971d8c44f0e010f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_ui</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_ui</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize UI and sets up global variable</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>none</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: void. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="53" column="6" bodyfile="ui.c" bodystart="53" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8c_1ae53c4ac7d02aadd7d3ad0587966cdc22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* prompt_line1</definition>
+        <argsstring>(void)</argsstring>
+        <name>prompt_line1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates prompt line1</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>none</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: char pointer to prompt line 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="76" column="6" bodyfile="ui.c" bodystart="76" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8c_1a7442002cf30c2f3c65c46d2e7f0af0c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* prompt_line2</definition>
+        <argsstring>(void)</argsstring>
+        <name>prompt_line2</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates prompt line 2</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>none</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: char pointer to prompt line 2 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="109" column="6" bodyfile="ui.c" bodystart="109" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8c_1a5f1b7595f2672ad9842f962ff050183d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* read_command</definition>
+        <argsstring>(void)</argsstring>
+        <name>read_command</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read command and check if command is script or stdin</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>none</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: char pointer of prompt and asks for input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.c" line="121" column="6" bodyfile="ui.c" bodystart="121" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>UI initialization and functions </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;readline/readline.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;locale.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="history_8h" kindref="compound">history.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="logger_8h" kindref="compound">logger.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ui_8h" kindref="compound">ui.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUF<sp/>4096</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>exit_status;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>list_index;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>username[LOGIN_NAME_MAX];</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hostname[HOST_NAME_MAX];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp_cwd[PATH_MAX];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>cwd[PATH_MAX];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>home_dir[PATH_MAX]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;/home/&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp_dir[PATH_MAX]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;~&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>--<sp/>Private<sp/>function<sp/>forward<sp/>declarations<sp/>--<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>readline_init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key_up(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key_down(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**command_completion(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*command_generator(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*line<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>line_sz<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>prompt_str1[BUF]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>prompt_str2[BUF]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-&gt;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>exit_status_success[]<sp/>=<sp/>{0xF0,0x9F,0x98,0x81,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>exit_status_fail[]<sp/>=<sp/>{0xF0,0x9F,0xA4,0xAE,</highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ui_8c_1a2c48080cb120e8745971d8c44f0e010f" kindref="member">init_ui</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8h_1ac60a33fb6244dfed75a5aaab504b8968" kindref="member">LOGP</ref>(</highlight><highlight class="stringliteral">&quot;Initializing<sp/>UI...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*locale<sp/>=<sp/>setlocale(LC_ALL,<sp/></highlight><highlight class="stringliteral">&quot;en_US.UTF-8&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="logger_8h_1a388edf12256bf73c3a8ee9734c3bd841" kindref="member">LOG</ref>(</highlight><highlight class="stringliteral">&quot;Setting<sp/>locale:<sp/>%s\n&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(locale<sp/>!=<sp/>NULL)<sp/>?<sp/>locale<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;could<sp/>not<sp/>set<sp/>locale!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>getlogin_r(username,<sp/>LOGIN_NAME_MAX);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>gethostname(hostname,<sp/>HOST_NAME_MAX);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>getcwd(cwd,<sp/>PATH_MAX);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_startup_hook<sp/>=<sp/>readline_init;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ui_8c_1ae53c4ac7d02aadd7d3ad0587966cdc22" kindref="member">prompt_line1</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/></highlight><highlight class="stringliteral">&quot;]-[&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>index[</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(int)<sp/>*<sp/>4<sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(index,</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>list_index);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/>index);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/></highlight><highlight class="stringliteral">&quot;]-[&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/>username);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/></highlight><highlight class="stringliteral">&quot;@&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/>hostname);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strstr(cwd,<sp/>home_dir)<sp/>!=<sp/>NULL)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/></highlight><highlight class="stringliteral">&quot;~&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcat(home_dir,<sp/>username);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*match;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>strlen(home_dir);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">((match<sp/>=<sp/>strstr(cwd,<sp/>home_dir)))<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*match<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcat(cwd,<sp/>match+len);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/>cwd);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prompt_str1;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ui_8c_1a7442002cf30c2f3c65c46d2e7f0af0c1" kindref="member">prompt_line2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prompt_str2;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ui_8c_1a5f1b7595f2672ad9842f962ff050183d" kindref="member">read_command</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!isatty(STDIN_FILENO))<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssize_t<sp/>nread<sp/>=<sp/>getline(&amp;line,<sp/>&amp;line_sz,<sp/>stdin);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(nread<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="logger_8h_1ac60a33fb6244dfed75a5aaab504b8968" kindref="member">LOGP</ref>(</highlight><highlight class="stringliteral">&quot;Reached<sp/>end<sp/>of<sp/>input<sp/>stream.<sp/>\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/>strcspn(line,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>line[newline]<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>line;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(prompt_str1,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcpy(prompt_str1,<sp/></highlight><highlight class="stringliteral">&quot;╭─[&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!exit_status)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/>exit_status_success);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strcat(prompt_str1,<sp/>exit_status_fail);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>puts(<ref refid="ui_8c_1ae53c4ac7d02aadd7d3ad0587966cdc22" kindref="member">prompt_line1</ref>());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>readline(<ref refid="ui_8c_1a7442002cf30c2f3c65c46d2e7f0af0c1" kindref="member">prompt_line2</ref>());</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>readline_init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_bind_keyseq(</highlight><highlight class="stringliteral">&quot;\\e[A&quot;</highlight><highlight class="normal">,<sp/>key_up);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_bind_keyseq(</highlight><highlight class="stringliteral">&quot;\\e[B&quot;</highlight><highlight class="normal">,<sp/>key_down);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_variable_bind(</highlight><highlight class="stringliteral">&quot;show-all-if-ambiguous&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;on&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_variable_bind(</highlight><highlight class="stringliteral">&quot;colored-completion-prefix&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;on&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_attempted_completion_function<sp/>=<sp/>command_completion;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key_up(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Modify<sp/>the<sp/>command<sp/>entry<sp/>text:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_replace_line(</highlight><highlight class="stringliteral">&quot;User<sp/>pressed<sp/>&apos;up&apos;<sp/>key&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Move<sp/>the<sp/>cursor<sp/>to<sp/>the<sp/>end<sp/>of<sp/>the<sp/>line:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_point<sp/>=<sp/>rl_end;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>reverse<sp/>history<sp/>search</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key_down(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key)</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Modify<sp/>the<sp/>command<sp/>entry<sp/>text:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_replace_line(</highlight><highlight class="stringliteral">&quot;User<sp/>pressed<sp/>&apos;down&apos;<sp/>key&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Move<sp/>the<sp/>cursor<sp/>to<sp/>the<sp/>end<sp/>of<sp/>the<sp/>line:<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_point<sp/>=<sp/>rl_end;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>forward<sp/>history<sp/>search</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**command_completion(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>end)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Tell<sp/>readline<sp/>that<sp/>if<sp/>we<sp/>don&apos;t<sp/>find<sp/>a<sp/>suitable<sp/>completion,<sp/>it<sp/>should<sp/>fall</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>back<sp/>on<sp/>its<sp/>built-in<sp/>filename<sp/>completion.<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>rl_attempted_completion_over<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rl_completion_matches(text,<sp/>command_generator);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*command_generator(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*text,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>find<sp/>potential<sp/>matching<sp/>completions<sp/>for<sp/>&apos;text.&apos;<sp/>If<sp/>you<sp/>need<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize<sp/>any<sp/>data<sp/>structures,<sp/>state<sp/>will<sp/>be<sp/>set<sp/>to<sp/>&apos;0&apos;<sp/>the<sp/>first<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>function<sp/>is<sp/>called.<sp/>You<sp/>will<sp/>likely<sp/>need<sp/>to<sp/>maintain<sp/>static/global</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>variables<sp/>to<sp/>track<sp/>where<sp/>you<sp/>are<sp/>in<sp/>the<sp/>search<sp/>so<sp/>that<sp/>you<sp/>don&apos;t<sp/>start</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>over<sp/>from<sp/>the<sp/>beginning.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ui.c"/>
+  </compounddef>
+</doxygen>

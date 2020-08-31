@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Project<sp/>2:<sp/>Command<sp/>Line<sp/>Shell</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>General<sp/>Info</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Simple<sp/>shell<sp/>implementation<sp/>that<sp/>runs<sp/>in<sp/>both<sp/>current<sp/>directory<sp/>and<sp/>in<sp/>the<sp/>PATH<sp/>environment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Components</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Prompt<sp/>-<sp/>Displays<sp/>shell<sp/>prompt<sp/>with<sp/>helpful<sp/>information</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Scripting<sp/>-<sp/>Supports<sp/>scripting<sp/>mode<sp/>to<sp/>run<sp/>test<sp/>cases</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Built-In<sp/>Commands<sp/>-<sp/>Supports<sp/>built-in<sp/>commands<sp/>including<sp/>(cd,<sp/>#,<sp/>history,<sp/>!,<sp/>jobs,<sp/>exit)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Signal<sp/>Handling<sp/>-<sp/>Able<sp/>to<sp/>grancefully<sp/>handle<sp/>user<sp/>pressing<sp/>Ctrl+C</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Redirection<sp/>-<sp/>Supports<sp/>file<sp/>output<sp/>redirection<sp/>and<sp/>pipe<sp/>redirection</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Background<sp/>Jobs<sp/>-<sp/>Run<sp/>command<sp/>in<sp/>the<sp/>background<sp/>if<sp/>command<sp/>ends<sp/>in<sp/>&amp;</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Tab<sp/>Completion<sp/>-<sp/>Autocomplete<sp/>command<sp/>of<sp/>user<sp/>if<sp/>user<sp/>presses<sp/>tab<sp/>key</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Run<sp/>Code</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+<codeline><highlight class="normal">./crash</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Run<sp/>Tests</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>test</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See:<sp/>https://www.cs.usfca.edu/~mmalensek/cs326/assignments/project-2.html</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

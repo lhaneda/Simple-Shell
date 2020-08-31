@@ -1,0 +1,115 @@
+\hypertarget{ui_8c}{}\doxysection{ui.\+c File Reference}
+\label{ui_8c}\index{ui.c@{ui.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$readline/readline.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}history.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ui_8c_a24f52ac52d6e714cb04a5aa01be3bdd0}\label{ui_8c_a24f52ac52d6e714cb04a5aa01be3bdd0}} 
+\#define {\bfseries B\+UF}~4096
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ui_8c_a2c48080cb120e8745971d8c44f0e010f}{init\+\_\+ui}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{ui_8c_ae53c4ac7d02aadd7d3ad0587966cdc22}{prompt\+\_\+line1}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{ui_8c_a7442002cf30c2f3c65c46d2e7f0af0c1}{prompt\+\_\+line2}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{ui_8c_a5f1b7595f2672ad9842f962ff050183d}{read\+\_\+command}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ui_8c_aab27efc112eb8d390875d80ac6da59bd}\label{ui_8c_aab27efc112eb8d390875d80ac6da59bd}} 
+bool {\bfseries exit\+\_\+status}
+\item 
+\mbox{\Hypertarget{ui_8c_a11f97c3de76da78c593ff4fa4abb4581}\label{ui_8c_a11f97c3de76da78c593ff4fa4abb4581}} 
+int {\bfseries list\+\_\+index}
+\item 
+\mbox{\Hypertarget{ui_8c_a92f9f963fc1844a1653a64b8e86a7db8}\label{ui_8c_a92f9f963fc1844a1653a64b8e86a7db8}} 
+char {\bfseries username} \mbox{[}L\+O\+G\+I\+N\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX\mbox{]}
+\item 
+\mbox{\Hypertarget{ui_8c_aada24ab0f5bbba555afe1420c16ac2f7}\label{ui_8c_aada24ab0f5bbba555afe1420c16ac2f7}} 
+char {\bfseries hostname} \mbox{[}H\+O\+S\+T\+\_\+\+N\+A\+M\+E\+\_\+\+M\+AX\mbox{]}
+\item 
+\mbox{\Hypertarget{ui_8c_aab9918aee7b44298acc5fc11b3695555}\label{ui_8c_aab9918aee7b44298acc5fc11b3695555}} 
+char {\bfseries temp\+\_\+cwd} \mbox{[}P\+A\+T\+H\+\_\+\+M\+AX\mbox{]}
+\item 
+\mbox{\Hypertarget{ui_8c_a9c19a595d32fe3e78b4aeb449cc19bf1}\label{ui_8c_a9c19a595d32fe3e78b4aeb449cc19bf1}} 
+char {\bfseries cwd} \mbox{[}P\+A\+T\+H\+\_\+\+M\+AX\mbox{]}
+\item 
+\mbox{\Hypertarget{ui_8c_acad4d9993e781f853a85718770be5949}\label{ui_8c_acad4d9993e781f853a85718770be5949}} 
+char {\bfseries home\+\_\+dir} \mbox{[}P\+A\+T\+H\+\_\+\+M\+AX\mbox{]} = \char`\"{}/home/\char`\"{}
+\item 
+\mbox{\Hypertarget{ui_8c_a37da80211a99c252815b08e78ecb54be}\label{ui_8c_a37da80211a99c252815b08e78ecb54be}} 
+char {\bfseries temp\+\_\+dir} \mbox{[}P\+A\+T\+H\+\_\+\+M\+AX\mbox{]} = \char`\"{}$\sim$\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UI initialization and functions 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ui_8c_a2c48080cb120e8745971d8c44f0e010f}\label{ui_8c_a2c48080cb120e8745971d8c44f0e010f}} 
+\index{ui.c@{ui.c}!init\_ui@{init\_ui}}
+\index{init\_ui@{init\_ui}!ui.c@{ui.c}}
+\doxysubsubsection{\texorpdfstring{init\_ui()}{init\_ui()}}
+{\footnotesize\ttfamily void init\+\_\+ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize UI and sets up global variable
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: void. \mbox{\Hypertarget{ui_8c_ae53c4ac7d02aadd7d3ad0587966cdc22}\label{ui_8c_ae53c4ac7d02aadd7d3ad0587966cdc22}} 
+\index{ui.c@{ui.c}!prompt\_line1@{prompt\_line1}}
+\index{prompt\_line1@{prompt\_line1}!ui.c@{ui.c}}
+\doxysubsubsection{\texorpdfstring{prompt\_line1()}{prompt\_line1()}}
+{\footnotesize\ttfamily char$\ast$ prompt\+\_\+line1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Creates prompt line1
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: char pointer to prompt line 1 \mbox{\Hypertarget{ui_8c_a7442002cf30c2f3c65c46d2e7f0af0c1}\label{ui_8c_a7442002cf30c2f3c65c46d2e7f0af0c1}} 
+\index{ui.c@{ui.c}!prompt\_line2@{prompt\_line2}}
+\index{prompt\_line2@{prompt\_line2}!ui.c@{ui.c}}
+\doxysubsubsection{\texorpdfstring{prompt\_line2()}{prompt\_line2()}}
+{\footnotesize\ttfamily char$\ast$ prompt\+\_\+line2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Creates prompt line 2
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: char pointer to prompt line 2 \mbox{\Hypertarget{ui_8c_a5f1b7595f2672ad9842f962ff050183d}\label{ui_8c_a5f1b7595f2672ad9842f962ff050183d}} 
+\index{ui.c@{ui.c}!read\_command@{read\_command}}
+\index{read\_command@{read\_command}!ui.c@{ui.c}}
+\doxysubsubsection{\texorpdfstring{read\_command()}{read\_command()}}
+{\footnotesize\ttfamily char$\ast$ read\+\_\+command (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Read command and check if command is script or stdin
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: char pointer of prompt and asks for input 

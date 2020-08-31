@@ -1,0 +1,119 @@
+\hypertarget{history_8c}{}\doxysection{history.\+c File Reference}
+\label{history_8c}\index{history.c@{history.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}history.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{history_8c_a53bf242cdbc6e517f7539436cbdf0f16}{hist\+\_\+init}} (unsigned int limit)
+\item 
+void \mbox{\hyperlink{history_8c_a347cbc48b8e346aed7163ddf719b91fc}{hist\+\_\+destroy}} (void)
+\item 
+void \mbox{\hyperlink{history_8c_af52f1f17c156adbb0a08db4b915aec1c}{hist\+\_\+add}} (const char $\ast$cmd)
+\item 
+void \mbox{\hyperlink{history_8c_af999c218a0ef1e9c89c61038644b6788}{hist\+\_\+print}} (void)
+\item 
+const char $\ast$ \mbox{\hyperlink{history_8c_ab0eacbf26f3866e1a2095ba62b084739}{hist\+\_\+search\+\_\+prefix}} (char $\ast$prefix)
+\item 
+const char $\ast$ \mbox{\hyperlink{history_8c_a4c4b7686ba5a8def713c77d69977c626}{hist\+\_\+search\+\_\+cnum}} (int command\+\_\+number)
+\item 
+unsigned int \mbox{\hyperlink{history_8c_a0eb606229fc94b7f7accbec1a6fa0839}{hist\+\_\+last\+\_\+cnum}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+History functions and global variables for history 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{history_8c_af52f1f17c156adbb0a08db4b915aec1c}\label{history_8c_af52f1f17c156adbb0a08db4b915aec1c}} 
+\index{history.c@{history.c}!hist\_add@{hist\_add}}
+\index{hist\_add@{hist\_add}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{hist\_add()}{hist\_add()}}
+{\footnotesize\ttfamily void hist\+\_\+add (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd }\end{DoxyParamCaption})}
+
+Add to history list
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: void \mbox{\Hypertarget{history_8c_a347cbc48b8e346aed7163ddf719b91fc}\label{history_8c_a347cbc48b8e346aed7163ddf719b91fc}} 
+\index{history.c@{history.c}!hist\_destroy@{hist\_destroy}}
+\index{hist\_destroy@{hist\_destroy}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{hist\_destroy()}{hist\_destroy()}}
+{\footnotesize\ttfamily void hist\+\_\+destroy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Destroy history
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: void \mbox{\Hypertarget{history_8c_a53bf242cdbc6e517f7539436cbdf0f16}\label{history_8c_a53bf242cdbc6e517f7539436cbdf0f16}} 
+\index{history.c@{history.c}!hist\_init@{hist\_init}}
+\index{hist\_init@{hist\_init}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{hist\_init()}{hist\_init()}}
+{\footnotesize\ttfamily void hist\+\_\+init (\begin{DoxyParamCaption}\item[{unsigned int}]{limit }\end{DoxyParamCaption})}
+
+Initializes init and sets up history data structures
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item limit\+: int maximum number of entries maintained
+\end{DoxyItemize}
+
+Returns\+: char pointer to the next token in the string. \mbox{\Hypertarget{history_8c_a0eb606229fc94b7f7accbec1a6fa0839}\label{history_8c_a0eb606229fc94b7f7accbec1a6fa0839}} 
+\index{history.c@{history.c}!hist\_last\_cnum@{hist\_last\_cnum}}
+\index{hist\_last\_cnum@{hist\_last\_cnum}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{hist\_last\_cnum()}{hist\_last\_cnum()}}
+{\footnotesize\ttfamily unsigned int hist\+\_\+last\+\_\+cnum (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Retrieves the most recent command number
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: int of the most recent command number \mbox{\Hypertarget{history_8c_af999c218a0ef1e9c89c61038644b6788}\label{history_8c_af999c218a0ef1e9c89c61038644b6788}} 
+\index{history.c@{history.c}!hist\_print@{hist\_print}}
+\index{hist\_print@{hist\_print}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{hist\_print()}{hist\_print()}}
+{\footnotesize\ttfamily void hist\+\_\+print (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Print history
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: void \mbox{\Hypertarget{history_8c_a4c4b7686ba5a8def713c77d69977c626}\label{history_8c_a4c4b7686ba5a8def713c77d69977c626}} 
+\index{history.c@{history.c}!hist\_search\_cnum@{hist\_search\_cnum}}
+\index{hist\_search\_cnum@{hist\_search\_cnum}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{hist\_search\_cnum()}{hist\_search\_cnum()}}
+{\footnotesize\ttfamily const char$\ast$ hist\+\_\+search\+\_\+cnum (\begin{DoxyParamCaption}\item[{int}]{command\+\_\+number }\end{DoxyParamCaption})}
+
+Retrieves a particular command number and return null if no match found
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item command\+\_\+number\+: command number to search for
+\end{DoxyItemize}
+
+Returns\+: char pointer to commmand a a command number \mbox{\Hypertarget{history_8c_ab0eacbf26f3866e1a2095ba62b084739}\label{history_8c_ab0eacbf26f3866e1a2095ba62b084739}} 
+\index{history.c@{history.c}!hist\_search\_prefix@{hist\_search\_prefix}}
+\index{hist\_search\_prefix@{hist\_search\_prefix}!history.c@{history.c}}
+\doxysubsubsection{\texorpdfstring{hist\_search\_prefix()}{hist\_search\_prefix()}}
+{\footnotesize\ttfamily const char$\ast$ hist\+\_\+search\+\_\+prefix (\begin{DoxyParamCaption}\item[{char $\ast$}]{prefix }\end{DoxyParamCaption})}
+
+Retrieves the most recent command starting with prefix or N\+U\+LL if no match found
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item prefix\+: char pointer to prefix of command
+\end{DoxyItemize}
+
+Returns\+: command starting with prefix or N\+U\+LL if no match found 

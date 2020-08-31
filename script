@@ -1,0 +1,7 @@
+#!/usr/bin/env base
+
+echo something
+cd /bin
+df -h
+touch a b cd
+

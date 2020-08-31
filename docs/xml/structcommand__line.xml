@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structcommand__line" kind="struct" language="C++" prot="public">
+    <compoundname>command_line</compoundname>
+    <includes refid="leetify_8h" local="no">leetify.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structcommand__line_1acfa8273e011c81acf9f3f362c8e563ac" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>command_line::tokens</definition>
+        <argsstring></argsstring>
+        <name>tokens</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="leetify.h" line="21" column="6" bodyfile="leetify.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcommand__line_1a136a7fdd7c22ee382f7ac5bf33c4faf4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>command_line::stdout_pipe</definition>
+        <argsstring></argsstring>
+        <name>stdout_pipe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="leetify.h" line="22" column="6" bodyfile="leetify.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structcommand__line_1a3bdc055f898d539b0103f89eed6c60af" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>command_line::stdout_file</definition>
+        <argsstring></argsstring>
+        <name>stdout_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="leetify.h" line="23" column="6" bodyfile="leetify.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>command line set up and tokens </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="leetify.h" line="20" column="19" bodyfile="leetify.h" bodystart="20" bodyend="24"/>
+    <listofallmembers>
+      <member refid="structcommand__line_1a3bdc055f898d539b0103f89eed6c60af" prot="public" virt="non-virtual"><scope>command_line</scope><name>stdout_file</name></member>
+      <member refid="structcommand__line_1a136a7fdd7c22ee382f7ac5bf33c4faf4" prot="public" virt="non-virtual"><scope>command_line</scope><name>stdout_pipe</name></member>
+      <member refid="structcommand__line_1acfa8273e011c81acf9f3f362c8e563ac" prot="public" virt="non-virtual"><scope>command_line</scope><name>tokens</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

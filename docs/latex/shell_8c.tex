@@ -1,0 +1,185 @@
+\hypertarget{shell_8c}{}\doxysection{shell.\+c File Reference}
+\label{shell_8c}\index{shell.c@{shell.c}}
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$pwd.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/param.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}history.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}leetify.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{shell_8c_ac7a1d08f4c988420cc930468c7ee0967}\label{shell_8c_ac7a1d08f4c988420cc930468c7ee0967}} 
+\#define {\bfseries U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}~32
+\item 
+\mbox{\Hypertarget{shell_8c_afe7fa6237aa7014e4d8680e7735bba43}\label{shell_8c_afe7fa6237aa7014e4d8680e7735bba43}} 
+\#define {\bfseries H\+O\+S\+T\+N\+A\+M\+E\+\_\+\+S\+I\+ZE}~64
+\item 
+\mbox{\Hypertarget{shell_8c_ae688d728e1acdfe5988c7db45d6f0166}\label{shell_8c_ae688d728e1acdfe5988c7db45d6f0166}} 
+\#define {\bfseries P\+A\+T\+H\+\_\+\+M\+AX}~4096
+\item 
+\mbox{\Hypertarget{shell_8c_a35d162d2031482ab388cb8476b7c46ca}\label{shell_8c_a35d162d2031482ab388cb8476b7c46ca}} 
+\#define {\bfseries P\+R\+O\+M\+P\+T\+\_\+\+M\+AX}~8000
+\item 
+\mbox{\Hypertarget{shell_8c_a3b965b30176f000b28ee90e75865ee20}\label{shell_8c_a3b965b30176f000b28ee90e75865ee20}} 
+\#define {\bfseries L\+I\+S\+T\+\_\+\+S\+I\+ZE}~100
+\item 
+\mbox{\Hypertarget{shell_8c_a24f52ac52d6e714cb04a5aa01be3bdd0}\label{shell_8c_a24f52ac52d6e714cb04a5aa01be3bdd0}} 
+\#define {\bfseries B\+UF}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{shell_8c_aafb4ae3d1a2cc744c179747ce113f0d1}{get\+\_\+prompt}} ()
+\item 
+void \mbox{\hyperlink{shell_8c_a4b515337891f74ebd79cb307db16bf33}{sigint\+\_\+handler}} (int signo)
+\item 
+void \mbox{\hyperlink{shell_8c_a41a9fbbdef30f99b2b8bef72bb577cf8}{sigchld\+\_\+handler}} (int signo)
+\item 
+void \mbox{\hyperlink{shell_8c_acc94ac48907a4d374c42c8f33edc5c8a}{cd\+\_\+command}} (char $\ast$tokens\mbox{[}$\,$\mbox{]})
+\item 
+char $\ast$ \mbox{\hyperlink{shell_8c_aea3db4d6079f2ed7ab80e3157aa18034}{remove\+\_\+comment}} (char $\ast$command)
+\item 
+int \mbox{\hyperlink{shell_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{shell_8c_a0c830b080c9f665b1584db6cfd7f865b}\label{shell_8c_a0c830b080c9f665b1584db6cfd7f865b}} 
+int {\bfseries command\+\_\+number}
+\item 
+\mbox{\Hypertarget{shell_8c_a563ac19354b7c6756fd393db19fd10cd}\label{shell_8c_a563ac19354b7c6756fd393db19fd10cd}} 
+char {\bfseries username} \mbox{[}U\+S\+E\+R\+N\+A\+M\+E\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+\mbox{\Hypertarget{shell_8c_a54031770189b73c2a8eab9272f475be6}\label{shell_8c_a54031770189b73c2a8eab9272f475be6}} 
+char {\bfseries hostname} \mbox{[}H\+O\+S\+T\+N\+A\+M\+E\+\_\+\+S\+I\+ZE\mbox{]}
+\item 
+\mbox{\Hypertarget{shell_8c_a9c19a595d32fe3e78b4aeb449cc19bf1}\label{shell_8c_a9c19a595d32fe3e78b4aeb449cc19bf1}} 
+char {\bfseries cwd} \mbox{[}P\+A\+T\+H\+\_\+\+M\+AX\mbox{]}
+\item 
+\mbox{\Hypertarget{shell_8c_ab783932ce4ad85ecbb725a4663cf1f78}\label{shell_8c_ab783932ce4ad85ecbb725a4663cf1f78}} 
+char {\bfseries prompt} \mbox{[}P\+R\+O\+M\+P\+T\+\_\+\+M\+AX\mbox{]}
+\item 
+\mbox{\Hypertarget{shell_8c_a7df2ff8fcd8bd7f4554e08393e0579c7}\label{shell_8c_a7df2ff8fcd8bd7f4554e08393e0579c7}} 
+pid\+\_\+t {\bfseries pid\+\_\+list} \mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{shell_8c_a11f97c3de76da78c593ff4fa4abb4581}\label{shell_8c_a11f97c3de76da78c593ff4fa4abb4581}} 
+int {\bfseries list\+\_\+index}
+\item 
+\mbox{\Hypertarget{shell_8c_a77aa3b42b068442efe9ba924352d04e6}\label{shell_8c_a77aa3b42b068442efe9ba924352d04e6}} 
+char $\ast$ {\bfseries line\+\_\+list} \mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{shell_8c_a3002b469e7a03a16ba4fd99322d10020}\label{shell_8c_a3002b469e7a03a16ba4fd99322d10020}} 
+bool {\bfseries exec}
+\item 
+\mbox{\Hypertarget{shell_8c_a210056ad350bc186f6bbc711ee06c543}\label{shell_8c_a210056ad350bc186f6bbc711ee06c543}} 
+int {\bfseries i\+\_\+tok}
+\item 
+\mbox{\Hypertarget{shell_8c_ade9cba72805fe52685a1deea307a8e82}\label{shell_8c_ade9cba72805fe52685a1deea307a8e82}} 
+char $\ast$ {\bfseries command}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple shell implementation that runs in both current directory and in the P\+A\+TH environment
+
+Compontents\+:
+\begin{DoxyItemize}
+\item Prompt -\/ Displays shell prompt with helpful information
+\item Scripting -\/ Supports scripting mode to run test cases
+\item Built-\/\+In Commands -\/ Supports built-\/in commands including (cd, \#, history, !, jobs, exit)
+\item Signal Handling -\/ Able to grancefully handle user pressing Ctrl+C
+\item Redirection -\/ Supports file output redirection and pipe redirection
+\item Background Jobs -\/ Run command in the background if command ends in \&
+\item Tab Completion -\/ Autocomplete command of user if user presses tab key 
+\end{DoxyItemize}
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{shell_8c_acc94ac48907a4d374c42c8f33edc5c8a}\label{shell_8c_acc94ac48907a4d374c42c8f33edc5c8a}} 
+\index{shell.c@{shell.c}!cd\_command@{cd\_command}}
+\index{cd\_command@{cd\_command}!shell.c@{shell.c}}
+\doxysubsubsection{\texorpdfstring{cd\_command()}{cd\_command()}}
+{\footnotesize\ttfamily void cd\+\_\+command (\begin{DoxyParamCaption}\item[{char $\ast$}]{tokens\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Handles cd command and changes directory
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item tokens\mbox{[}\mbox{]}\+: string array for chdir relocation
+\end{DoxyItemize}
+
+Returns\+: void \mbox{\Hypertarget{shell_8c_aafb4ae3d1a2cc744c179747ce113f0d1}\label{shell_8c_aafb4ae3d1a2cc744c179747ce113f0d1}} 
+\index{shell.c@{shell.c}!get\_prompt@{get\_prompt}}
+\index{get\_prompt@{get\_prompt}!shell.c@{shell.c}}
+\doxysubsubsection{\texorpdfstring{get\_prompt()}{get\_prompt()}}
+{\footnotesize\ttfamily char$\ast$ get\+\_\+prompt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets Prompt
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: char string of prompt \mbox{\Hypertarget{shell_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{shell_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{shell.c@{shell.c}!main@{main}}
+\index{main@{main}!shell.c@{shell.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Main function. Initializes init ui and takes in command
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: void \mbox{\Hypertarget{shell_8c_aea3db4d6079f2ed7ab80e3157aa18034}\label{shell_8c_aea3db4d6079f2ed7ab80e3157aa18034}} 
+\index{shell.c@{shell.c}!remove\_comment@{remove\_comment}}
+\index{remove\_comment@{remove\_comment}!shell.c@{shell.c}}
+\doxysubsubsection{\texorpdfstring{remove\_comment()}{remove\_comment()}}
+{\footnotesize\ttfamily char$\ast$ remove\+\_\+comment (\begin{DoxyParamCaption}\item[{char $\ast$}]{command }\end{DoxyParamCaption})}
+
+Removes comment from command
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item command\+: char to change
+\end{DoxyItemize}
+
+Returns\+: command without comment \mbox{\Hypertarget{shell_8c_a41a9fbbdef30f99b2b8bef72bb577cf8}\label{shell_8c_a41a9fbbdef30f99b2b8bef72bb577cf8}} 
+\index{shell.c@{shell.c}!sigchld\_handler@{sigchld\_handler}}
+\index{sigchld\_handler@{sigchld\_handler}!shell.c@{shell.c}}
+\doxysubsubsection{\texorpdfstring{sigchld\_handler()}{sigchld\_handler()}}
+{\footnotesize\ttfamily void sigchld\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+Signal handler for when the child quits
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item signo\+: int representing child quit
+\end{DoxyItemize}
+
+Returns\+: void \mbox{\Hypertarget{shell_8c_a4b515337891f74ebd79cb307db16bf33}\label{shell_8c_a4b515337891f74ebd79cb307db16bf33}} 
+\index{shell.c@{shell.c}!sigint\_handler@{sigint\_handler}}
+\index{sigint\_handler@{sigint\_handler}!shell.c@{shell.c}}
+\doxysubsubsection{\texorpdfstring{sigint\_handler()}{sigint\_handler()}}
+{\footnotesize\ttfamily void sigint\+\_\+handler (\begin{DoxyParamCaption}\item[{int}]{signo }\end{DoxyParamCaption})}
+
+Handles sigint and makes sure to program does not stop from Ctrl+c
+
+Parameter(s)\+::
+\begin{DoxyItemize}
+\item signo\+: int representing signal number of sigint
+\end{DoxyItemize}
+
+Returns\+: void 

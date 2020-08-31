@@ -1,0 +1,57 @@
+\hypertarget{ui_8h}{}\doxysection{ui.\+h File Reference}
+\label{ui_8h}\index{ui.h@{ui.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ui_8h_a2c48080cb120e8745971d8c44f0e010f}{init\+\_\+ui}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{ui_8h_ae53c4ac7d02aadd7d3ad0587966cdc22}{prompt\+\_\+line1}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{ui_8h_a5f1b7595f2672ad9842f962ff050183d}{read\+\_\+command}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Text-\/based UI functionality. These functions are primarily concerned with interacting with the readline library. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ui_8h_a2c48080cb120e8745971d8c44f0e010f}\label{ui_8h_a2c48080cb120e8745971d8c44f0e010f}} 
+\index{ui.h@{ui.h}!init\_ui@{init\_ui}}
+\index{init\_ui@{init\_ui}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{init\_ui()}{init\_ui()}}
+{\footnotesize\ttfamily void init\+\_\+ui (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize UI and sets up global variable
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: void. \mbox{\Hypertarget{ui_8h_ae53c4ac7d02aadd7d3ad0587966cdc22}\label{ui_8h_ae53c4ac7d02aadd7d3ad0587966cdc22}} 
+\index{ui.h@{ui.h}!prompt\_line1@{prompt\_line1}}
+\index{prompt\_line1@{prompt\_line1}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{prompt\_line1()}{prompt\_line1()}}
+{\footnotesize\ttfamily char$\ast$ prompt\+\_\+line1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Creates prompt line1
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: char pointer to prompt line 1 \mbox{\Hypertarget{ui_8h_a5f1b7595f2672ad9842f962ff050183d}\label{ui_8h_a5f1b7595f2672ad9842f962ff050183d}} 
+\index{ui.h@{ui.h}!read\_command@{read\_command}}
+\index{read\_command@{read\_command}!ui.h@{ui.h}}
+\doxysubsubsection{\texorpdfstring{read\_command()}{read\_command()}}
+{\footnotesize\ttfamily char$\ast$ read\+\_\+command (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Read command and check if command is script or stdin
+
+Parameter(s)\+:
+\begin{DoxyItemize}
+\item none
+\end{DoxyItemize}
+
+Returns\+: char pointer of prompt and asks for input 

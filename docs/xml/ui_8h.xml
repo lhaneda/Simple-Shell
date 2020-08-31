@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="ui_8h" kind="file" language="C++">
+    <compoundname>ui.h</compoundname>
+    <includedby refid="shell_8c" local="yes">shell.c</includedby>
+    <includedby refid="ui_8c" local="yes">ui.c</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>shell.c</label>
+        <link refid="shell_8c"/>
+      </node>
+      <node id="3">
+        <label>ui.c</label>
+        <link refid="ui_8c"/>
+      </node>
+      <node id="1">
+        <label>ui.h</label>
+        <link refid="ui_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ui_8h_1a2c48080cb120e8745971d8c44f0e010f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void init_ui</definition>
+        <argsstring>(void)</argsstring>
+        <name>init_ui</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize UI and sets up global variable</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>none</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: void. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.h" line="11" column="6" bodyfile="ui.c" bodystart="53" bodyend="66" declfile="ui.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8h_1ae53c4ac7d02aadd7d3ad0587966cdc22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* prompt_line1</definition>
+        <argsstring>(void)</argsstring>
+        <name>prompt_line1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates prompt line1</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>none</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: char pointer to prompt line 1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.h" line="12" column="6" bodyfile="ui.c" bodystart="76" bodyend="99" declfile="ui.h" declline="12" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="ui_8h_1a5f1b7595f2672ad9842f962ff050183d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* read_command</definition>
+        <argsstring>(void)</argsstring>
+        <name>read_command</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read command and check if command is script or stdin</para>
+<para>Parameter(s):<itemizedlist>
+<listitem><para>none</para>
+</listitem></itemizedlist>
+</para>
+<para>Returns: char pointer of prompt and asks for input </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ui.h" line="13" column="6" bodyfile="ui.c" bodystart="121" bodyend="143" declfile="ui.h" declline="13" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Text-based UI functionality. These functions are primarily concerned with interacting with the readline library. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>_UI_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_UI_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ui_8h_1a2c48080cb120e8745971d8c44f0e010f" kindref="member">init_ui</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ui_8h_1ae53c4ac7d02aadd7d3ad0587966cdc22" kindref="member">prompt_line1</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="ui_8h_1a5f1b7595f2672ad9842f962ff050183d" kindref="member">read_command</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ui.h"/>
+  </compounddef>
+</doxygen>
